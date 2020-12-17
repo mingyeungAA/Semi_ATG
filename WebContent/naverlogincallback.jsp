@@ -40,8 +40,6 @@
       System.out.print("responseCode="+responseCode);
       if(responseCode==200) { // 정상 호출
         br = new BufferedReader(new InputStreamReader(con.getInputStream()));
-		
-      	
       } else {  // 에러 발생
         br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
       }
