@@ -138,11 +138,9 @@ public class RegisterController extends HttpServlet {
 		
 		}else if(command.equals("naver")) {
 			
-			//System.out.println("dd");
 			String access_token = (String) session.getAttribute("access_token");
 			String refresh_token = (String)session.getAttribute("refresh_token");
-			//System.out.println(access_token);
-			//System.out.println(refresh_token);
+
 			if (access_token != null) {
 				try {
 					String apiurl = "https://openapi.naver.com/v1/nid/me";
@@ -170,7 +168,6 @@ public class RegisterController extends HttpServlet {
 					System.out.println(res);
 					br.close();
 					
-					
 		    	        JSONParser parsing = new JSONParser();
 		    	        Object obj = parsing.parse(res.toString());
 		    	        JSONObject jsonObj = (JSONObject)obj;
@@ -195,7 +192,6 @@ public class RegisterController extends HttpServlet {
 				
 				//dispatch(request, response, "registform2.jsp");
 			}
-			
 			
 		}else if(command.equals("kakao")) {
 			System.out.println("됏따");

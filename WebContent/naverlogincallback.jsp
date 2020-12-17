@@ -50,7 +50,6 @@
         res.append(inputLine);
       }
       
-      
       br.close();
 		
       if(responseCode == 200){
